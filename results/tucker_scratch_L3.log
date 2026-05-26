@@ -1,0 +1,39 @@
+使用设备: cuda
+加载 tokenizer: E:/BaiduNetdiskDownload/bert-base-chinese
+准备数据集...
+加载本地文件: ./example.txt (635KB)
+  切分得到 2261 段文本
+Tokenizing:   0%|          | 0/2261 [00:00<?, ?it/s]Tokenizing:  13%|█▎        | 296/2261 [00:00<00:00, 2952.05it/s]Tokenizing:  27%|██▋       | 608/2261 [00:00<00:00, 3041.84it/s]Tokenizing:  41%|████▏     | 934/2261 [00:00<00:00, 3140.45it/s]Tokenizing:  63%|██████▎   | 1421/2261 [00:00<00:00, 3821.23it/s]Tokenizing:  80%|███████▉  | 1804/2261 [00:00<00:00, 3566.57it/s]Tokenizing:  96%|█████████▌| 2164/2261 [00:00<00:00, 3528.97it/s]Tokenizing: 100%|██████████| 2261/2261 [00:00<00:00, 3448.00it/s]
+训练样本: 2034, 验证样本: 227
+
+创建模型: tucker (from_scratch=True, layers=3)...
+  总参数: 39,302,216
+  可训练: 14,974,656
+  角色: Tucker QKV    (你的方案, 14M)
+
+=== 训练完成 ===
+最佳 Eval PPL: 3371.24
+结果: ./results\bert_tucker_scratch_L3_results.json
+Checkpoint: ./results\bert_tucker_scratch_L3_checkpoint.pt
+下次运行: python train_bert.py --variant tucker --from_scratch --num_layers 3 即可自动续训
+使用设备: cuda
+加载 tokenizer: E:/BaiduNetdiskDownload/bert-base-chinese
+准备数据集...
+加载本地文件: ./example.txt (635KB)
+  切分得到 2261 段文本
+Tokenizing:   0%|          | 0/2261 [00:00<?, ?it/s]Tokenizing:  14%|█▍        | 323/2261 [00:00<00:00, 3220.51it/s]Tokenizing:  29%|██▉       | 658/2261 [00:00<00:00, 3296.01it/s]Tokenizing:  47%|████▋     | 1068/2261 [00:00<00:00, 3662.10it/s]Tokenizing:  68%|██████▊   | 1528/2261 [00:00<00:00, 4027.10it/s]Tokenizing:  85%|████████▌ | 1931/2261 [00:00<00:00, 3858.95it/s]Tokenizing: 100%|██████████| 2261/2261 [00:00<00:00, 3721.18it/s]
+训练样本: 2034, 验证样本: 227
+
+创建模型: tucker (from_scratch=True, layers=3)...
+  总参数: 39,302,216
+  可训练: 14,974,656
+  角色: Tucker QKV    (你的方案, 14M)
+
+发现自动保存的 checkpoint: ./results\bert_tucker_scratch_L3_checkpoint.pt
+  恢复到 Epoch 51, Best PPL=3371.2
+
+=== 训练完成 ===
+最佳 Eval PPL: 3371.24
+结果: ./results\bert_tucker_scratch_L3_results.json
+Checkpoint: ./results\bert_tucker_scratch_L3_checkpoint.pt
+下次运行: python train_bert.py --variant tucker --from_scratch --num_layers 3 即可自动续训

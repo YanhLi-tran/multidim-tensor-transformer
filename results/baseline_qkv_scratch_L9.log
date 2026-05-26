@@ -1,0 +1,42 @@
+使用设备: cuda
+加载 tokenizer: E:/BaiduNetdiskDownload/bert-base-chinese
+准备数据集...
+加载本地文件: ./example.txt (635KB)
+  切分得到 2261 段文本
+Tokenizing:   0%|          | 0/2261 [00:00<?, ?it/s]Tokenizing:  12%|█▏        | 281/2261 [00:00<00:00, 2804.09it/s]Tokenizing:  26%|██▌       | 580/2261 [00:00<00:00, 2874.21it/s]Tokenizing:  39%|███▉      | 883/2261 [00:00<00:00, 2942.29it/s]Tokenizing:  60%|█████▉    | 1348/2261 [00:00<00:00, 3611.43it/s]Tokenizing:  76%|███████▌  | 1710/2261 [00:00<00:00, 3335.00it/s]Tokenizing:  91%|█████████ | 2047/2261 [00:00<00:00, 3345.90it/s]Tokenizing: 100%|██████████| 2261/2261 [00:00<00:00, 3256.64it/s]
+训练样本: 2034, 验证样本: 227
+
+创建模型: baseline_qkv (from_scratch=True, layers=9)...
+  总参数: 96,972,680
+  可训练: 58,461,696
+  角色: Baseline-QKV  (上界, 58M QKV)
+
+发现自动保存的 checkpoint: ./results\bert_baseline_qkv_scratch_L9_checkpoint.pt
+  恢复到 Epoch 21, Best PPL=3738.4
+
+=== 训练完成 ===
+最佳 Eval PPL: 3179.73
+结果: ./results\bert_baseline_qkv_scratch_L9_results.json
+Checkpoint: ./results\bert_baseline_qkv_scratch_L9_checkpoint.pt
+下次运行: python train_bert.py --variant baseline_qkv --from_scratch --num_layers 9 即可自动续训
+使用设备: cuda
+加载 tokenizer: E:/BaiduNetdiskDownload/bert-base-chinese
+准备数据集...
+加载本地文件: ./example.txt (635KB)
+  切分得到 2261 段文本
+Tokenizing:   0%|          | 0/2261 [00:00<?, ?it/s]Tokenizing:  13%|█▎        | 293/2261 [00:00<00:00, 2917.52it/s]Tokenizing:  27%|██▋       | 609/2261 [00:00<00:00, 3054.05it/s]Tokenizing:  40%|████      | 915/2261 [00:00<00:00, 3047.71it/s]Tokenizing:  62%|██████▏   | 1400/2261 [00:00<00:00, 3755.98it/s]Tokenizing:  79%|███████▊  | 1776/2261 [00:00<00:00, 3425.11it/s]Tokenizing:  94%|█████████▍| 2124/2261 [00:00<00:00, 3382.12it/s]Tokenizing: 100%|██████████| 2261/2261 [00:00<00:00, 3323.73it/s]
+训练样本: 2034, 验证样本: 227
+
+创建模型: baseline_qkv (from_scratch=True, layers=9)...
+  总参数: 96,972,680
+  可训练: 58,461,696
+  角色: Baseline-QKV  (上界, 58M QKV)
+
+发现自动保存的 checkpoint: ./results\bert_baseline_qkv_scratch_L9_checkpoint.pt
+  恢复到 Epoch 51, Best PPL=3179.7
+
+=== 训练完成 ===
+最佳 Eval PPL: 3179.73
+结果: ./results\bert_baseline_qkv_scratch_L9_results.json
+Checkpoint: ./results\bert_baseline_qkv_scratch_L9_checkpoint.pt
+下次运行: python train_bert.py --variant baseline_qkv --from_scratch --num_layers 9 即可自动续训

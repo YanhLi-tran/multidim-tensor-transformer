@@ -9,7 +9,7 @@ build/
 # Checkpoints & results
 *.pt
 results_mini/
-results/
+results/*.pt
 
 # IDE
 .vscode/

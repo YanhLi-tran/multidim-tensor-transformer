@@ -1,0 +1,42 @@
+使用设备: cuda
+加载 tokenizer: E:/BaiduNetdiskDownload/bert-base-chinese
+准备数据集...
+加载本地文件: ./example.txt (635KB)
+  切分得到 2261 段文本
+Tokenizing:   0%|          | 0/2261 [00:00<?, ?it/s]Tokenizing:  15%|█▍        | 333/2261 [00:00<00:00, 3325.36it/s]Tokenizing:  30%|██▉       | 668/2261 [00:00<00:00, 3323.96it/s]Tokenizing:  49%|████▊     | 1102/2261 [00:00<00:00, 3786.09it/s]Tokenizing:  70%|██████▉   | 1574/2261 [00:00<00:00, 4148.84it/s]Tokenizing:  88%|████████▊ | 1989/2261 [00:00<00:00, 4009.48it/s]Tokenizing: 100%|██████████| 2261/2261 [00:00<00:00, 3878.84it/s]
+训练样本: 2034, 验证样本: 227
+
+创建模型: tucker (from_scratch=True, layers=12)...
+  总参数: 105,206,408
+  可训练: 59,603,712
+  角色: Tucker QKV    (你的方案, 59M)
+
+发现自动保存的 checkpoint: ./results\bert_tucker_scratch_L12_checkpoint.pt
+  恢复到 Epoch 11, Best PPL=7725.2
+
+=== 训练完成 ===
+最佳 Eval PPL: 7725.15
+结果: ./results\bert_tucker_scratch_L12_results.json
+Checkpoint: ./results\bert_tucker_scratch_L12_checkpoint.pt
+下次运行: python train_bert.py --variant tucker --from_scratch --num_layers 12 即可自动续训
+使用设备: cuda
+加载 tokenizer: E:/BaiduNetdiskDownload/bert-base-chinese
+准备数据集...
+加载本地文件: ./example.txt (635KB)
+  切分得到 2261 段文本
+Tokenizing:   0%|          | 0/2261 [00:00<?, ?it/s]Tokenizing:   8%|▊         | 185/2261 [00:00<00:01, 1836.49it/s]Tokenizing:  20%|█▉        | 441/2261 [00:00<00:00, 2258.16it/s]Tokenizing:  32%|███▏      | 714/2261 [00:00<00:00, 2468.45it/s]Tokenizing:  46%|████▌     | 1037/2261 [00:00<00:00, 2766.92it/s]Tokenizing:  64%|██████▎   | 1436/2261 [00:00<00:00, 3205.62it/s]Tokenizing:  78%|███████▊  | 1757/2261 [00:00<00:00, 3103.49it/s]Tokenizing:  93%|█████████▎| 2100/2261 [00:00<00:00, 3207.55it/s]Tokenizing: 100%|██████████| 2261/2261 [00:00<00:00, 2962.94it/s]
+训练样本: 2034, 验证样本: 227
+
+创建模型: tucker (from_scratch=True, layers=12)...
+  总参数: 105,206,408
+  可训练: 59,603,712
+  角色: Tucker QKV    (你的方案, 59M)
+
+发现自动保存的 checkpoint: ./results\bert_tucker_scratch_L12_checkpoint.pt
+  恢复到 Epoch 51, Best PPL=7725.2
+
+=== 训练完成 ===
+最佳 Eval PPL: 7725.15
+结果: ./results\bert_tucker_scratch_L12_results.json
+Checkpoint: ./results\bert_tucker_scratch_L12_checkpoint.pt
+下次运行: python train_bert.py --variant tucker --from_scratch --num_layers 12 即可自动续训

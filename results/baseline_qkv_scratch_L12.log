@@ -1,0 +1,42 @@
+使用设备: cuda
+加载 tokenizer: E:/BaiduNetdiskDownload/bert-base-chinese
+准备数据集...
+加载本地文件: ./example.txt (635KB)
+  切分得到 2261 段文本
+Tokenizing:   0%|          | 0/2261 [00:00<?, ?it/s]Tokenizing:  10%|█         | 231/2261 [00:00<00:00, 2304.73it/s]Tokenizing:  22%|██▏       | 494/2261 [00:00<00:00, 2492.87it/s]Tokenizing:  33%|███▎      | 744/2261 [00:00<00:00, 2177.31it/s]Tokenizing:  43%|████▎     | 966/2261 [00:00<00:00, 2061.02it/s]Tokenizing:  56%|█████▋    | 1272/2261 [00:00<00:00, 2387.64it/s]Tokenizing:  68%|██████▊   | 1532/2261 [00:00<00:00, 2453.99it/s]Tokenizing:  79%|███████▉  | 1786/2261 [00:00<00:00, 2480.77it/s]Tokenizing:  92%|█████████▏| 2071/2261 [00:00<00:00, 2592.95it/s]Tokenizing: 100%|██████████| 2261/2261 [00:00<00:00, 2415.47it/s]
+训练样本: 2034, 验证样本: 227
+
+创建模型: baseline_qkv (from_scratch=True, layers=12)...
+  总参数: 123,551,624
+  可训练: 77,948,928
+  角色: Baseline-QKV  (上界, 77M QKV)
+
+发现自动保存的 checkpoint: ./results\bert_baseline_qkv_scratch_L12_checkpoint.pt
+  恢复到 Epoch 2, Best PPL=10977.7
+
+=== 训练完成 ===
+最佳 Eval PPL: 8355.39
+结果: ./results\bert_baseline_qkv_scratch_L12_results.json
+Checkpoint: ./results\bert_baseline_qkv_scratch_L12_checkpoint.pt
+下次运行: python train_bert.py --variant baseline_qkv --from_scratch --num_layers 12 即可自动续训
+使用设备: cuda
+加载 tokenizer: E:/BaiduNetdiskDownload/bert-base-chinese
+准备数据集...
+加载本地文件: ./example.txt (635KB)
+  切分得到 2261 段文本
+Tokenizing:   0%|          | 0/2261 [00:00<?, ?it/s]Tokenizing:   9%|▉         | 212/2261 [00:00<00:00, 2117.69it/s]Tokenizing:  21%|██        | 464/2261 [00:00<00:00, 2352.88it/s]Tokenizing:  31%|███       | 700/2261 [00:00<00:00, 2232.25it/s]Tokenizing:  42%|████▏     | 944/2261 [00:00<00:00, 2309.53it/s]Tokenizing:  59%|█████▊    | 1328/2261 [00:00<00:00, 2846.45it/s]Tokenizing:  71%|███████▏  | 1615/2261 [00:00<00:00, 2674.22it/s]Tokenizing:  83%|████████▎ | 1886/2261 [00:00<00:00, 2584.38it/s]Tokenizing:  95%|█████████▍| 2147/2261 [00:00<00:00, 2548.83it/s]Tokenizing: 100%|██████████| 2261/2261 [00:00<00:00, 2504.46it/s]
+训练样本: 2034, 验证样本: 227
+
+创建模型: baseline_qkv (from_scratch=True, layers=12)...
+  总参数: 123,551,624
+  可训练: 77,948,928
+  角色: Baseline-QKV  (上界, 77M QKV)
+
+发现自动保存的 checkpoint: ./results\bert_baseline_qkv_scratch_L12_checkpoint.pt
+  恢复到 Epoch 51, Best PPL=8355.4
+
+=== 训练完成 ===
+最佳 Eval PPL: 8355.39
+结果: ./results\bert_baseline_qkv_scratch_L12_results.json
+Checkpoint: ./results\bert_baseline_qkv_scratch_L12_checkpoint.pt
+下次运行: python train_bert.py --variant baseline_qkv --from_scratch --num_layers 12 即可自动续训

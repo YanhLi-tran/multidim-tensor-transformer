@@ -1,0 +1,39 @@
+使用设备: cuda
+加载 tokenizer: E:/BaiduNetdiskDownload/bert-base-chinese
+准备数据集...
+加载本地文件: ./example.txt (635KB)
+  切分得到 2261 段文本
+Tokenizing:   0%|          | 0/2261 [00:00<?, ?it/s]Tokenizing:  14%|█▍        | 322/2261 [00:00<00:00, 3211.99it/s]Tokenizing:  28%|██▊       | 644/2261 [00:00<00:00, 3172.10it/s]Tokenizing:  45%|████▍     | 1007/2261 [00:00<00:00, 3378.66it/s]Tokenizing:  66%|██████▌   | 1481/2261 [00:00<00:00, 3911.11it/s]Tokenizing:  83%|████████▎ | 1873/2261 [00:00<00:00, 3810.28it/s]Tokenizing: 100%|█████████▉| 2255/2261 [00:00<00:00, 3756.37it/s]Tokenizing: 100%|██████████| 2261/2261 [00:00<00:00, 3668.06it/s]
+训练样本: 2034, 验证样本: 227
+
+创建模型: tucker (from_scratch=True, layers=9)...
+  总参数: 83,238,344
+  可训练: 44,727,360
+  角色: Tucker QKV    (你的方案, 44M)
+
+=== 训练完成 ===
+最佳 Eval PPL: 3531.17
+结果: ./results\bert_tucker_scratch_L9_results.json
+Checkpoint: ./results\bert_tucker_scratch_L9_checkpoint.pt
+下次运行: python train_bert.py --variant tucker --from_scratch --num_layers 9 即可自动续训
+使用设备: cuda
+加载 tokenizer: E:/BaiduNetdiskDownload/bert-base-chinese
+准备数据集...
+加载本地文件: ./example.txt (635KB)
+  切分得到 2261 段文本
+Tokenizing:   0%|          | 0/2261 [00:00<?, ?it/s]Tokenizing:  13%|█▎        | 285/2261 [00:00<00:00, 2844.04it/s]Tokenizing:  26%|██▌       | 584/2261 [00:00<00:00, 2924.38it/s]Tokenizing:  40%|████      | 906/2261 [00:00<00:00, 3058.49it/s]Tokenizing:  61%|██████    | 1375/2261 [00:00<00:00, 3697.63it/s]Tokenizing:  77%|███████▋  | 1745/2261 [00:00<00:00, 3287.92it/s]Tokenizing:  92%|█████████▏| 2081/2261 [00:00<00:00, 3225.39it/s]Tokenizing: 100%|██████████| 2261/2261 [00:00<00:00, 3192.27it/s]
+训练样本: 2034, 验证样本: 227
+
+创建模型: tucker (from_scratch=True, layers=9)...
+  总参数: 83,238,344
+  可训练: 44,727,360
+  角色: Tucker QKV    (你的方案, 44M)
+
+发现自动保存的 checkpoint: ./results\bert_tucker_scratch_L9_checkpoint.pt
+  恢复到 Epoch 51, Best PPL=3531.2
+
+=== 训练完成 ===
+最佳 Eval PPL: 3531.17
+结果: ./results\bert_tucker_scratch_L9_results.json
+Checkpoint: ./results\bert_tucker_scratch_L9_checkpoint.pt
+下次运行: python train_bert.py --variant tucker --from_scratch --num_layers 9 即可自动续训

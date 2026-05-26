@@ -1,0 +1,57 @@
+使用设备: cuda
+加载 tokenizer: E:/BaiduNetdiskDownload/bert-base-chinese
+准备数据集...
+加载本地文件: ./example.txt (635KB)
+  切分得到 2261 段文本
+Tokenizing:   0%|          | 0/2261 [00:00<?, ?it/s]Tokenizing:  14%|█▍        | 318/2261 [00:00<00:00, 3179.40it/s]Tokenizing:  28%|██▊       | 636/2261 [00:00<00:00, 2931.15it/s]Tokenizing:  43%|████▎     | 972/2261 [00:00<00:00, 3114.86it/s]Tokenizing:  62%|██████▏   | 1396/2261 [00:00<00:00, 3544.44it/s]Tokenizing:  78%|███████▊  | 1753/2261 [00:00<00:00, 3165.28it/s]Tokenizing:  92%|█████████▏| 2077/2261 [00:00<00:00, 3096.51it/s]Tokenizing: 100%|██████████| 2261/2261 [00:00<00:00, 3145.36it/s]
+训练样本: 2034, 验证样本: 227
+
+创建模型: tucker (from_scratch=True, layers=6)...
+  总参数: 61,270,280
+  可训练: 29,851,008
+  角色: Tucker QKV    (你的方案, 29M)
+
+发现自动保存的 checkpoint: ./results\bert_tucker_scratch_L6_checkpoint.pt
+  恢复到 Epoch 2, Best PPL=9645.5
+使用设备: cuda
+加载 tokenizer: E:/BaiduNetdiskDownload/bert-base-chinese
+准备数据集...
+加载本地文件: ./example.txt (635KB)
+  切分得到 2261 段文本
+Tokenizing:   0%|          | 0/2261 [00:00<?, ?it/s]Tokenizing:  12%|█▏        | 275/2261 [00:00<00:00, 2746.08it/s]Tokenizing:  24%|██▍       | 550/2261 [00:00<00:00, 2673.66it/s]Tokenizing:  36%|███▌      | 818/2261 [00:00<00:00, 2597.37it/s]Tokenizing:  55%|█████▍    | 1237/2261 [00:00<00:00, 3207.09it/s]Tokenizing:  70%|██████▉   | 1574/2261 [00:00<00:00, 3262.93it/s]Tokenizing:  84%|████████▍ | 1902/2261 [00:00<00:00, 3234.19it/s]Tokenizing:  98%|█████████▊| 2227/2261 [00:00<00:00, 3057.28it/s]Tokenizing: 100%|██████████| 2261/2261 [00:00<00:00, 3046.13it/s]
+训练样本: 2034, 验证样本: 227
+
+创建模型: tucker (from_scratch=True, layers=6)...
+  总参数: 61,270,280
+  可训练: 29,851,008
+  角色: Tucker QKV    (你的方案, 29M)
+
+发现自动保存的 checkpoint: ./results\bert_tucker_scratch_L6_checkpoint.pt
+  恢复到 Epoch 4, Best PPL=7699.2
+
+=== 训练完成 ===
+最佳 Eval PPL: 3639.68
+结果: ./results\bert_tucker_scratch_L6_results.json
+Checkpoint: ./results\bert_tucker_scratch_L6_checkpoint.pt
+下次运行: python train_bert.py --variant tucker --from_scratch --num_layers 6 即可自动续训
+使用设备: cuda
+加载 tokenizer: E:/BaiduNetdiskDownload/bert-base-chinese
+准备数据集...
+加载本地文件: ./example.txt (635KB)
+  切分得到 2261 段文本
+Tokenizing:   0%|          | 0/2261 [00:00<?, ?it/s]Tokenizing:  11%|█▏        | 260/2261 [00:00<00:00, 2590.36it/s]Tokenizing:  25%|██▍       | 557/2261 [00:00<00:00, 2813.17it/s]Tokenizing:  39%|███▉      | 887/2261 [00:00<00:00, 3034.64it/s]Tokenizing:  61%|██████    | 1373/2261 [00:00<00:00, 3752.33it/s]Tokenizing:  77%|███████▋  | 1749/2261 [00:00<00:00, 3479.25it/s]Tokenizing:  93%|█████████▎| 2109/2261 [00:00<00:00, 3516.36it/s]Tokenizing: 100%|██████████| 2261/2261 [00:00<00:00, 3354.08it/s]
+训练样本: 2034, 验证样本: 227
+
+创建模型: tucker (from_scratch=True, layers=6)...
+  总参数: 61,270,280
+  可训练: 29,851,008
+  角色: Tucker QKV    (你的方案, 29M)
+
+发现自动保存的 checkpoint: ./results\bert_tucker_scratch_L6_checkpoint.pt
+  恢复到 Epoch 51, Best PPL=3639.7
+
+=== 训练完成 ===
+最佳 Eval PPL: 3639.68
+结果: ./results\bert_tucker_scratch_L6_results.json
+Checkpoint: ./results\bert_tucker_scratch_L6_checkpoint.pt
+下次运行: python train_bert.py --variant tucker --from_scratch --num_layers 6 即可自动续训
