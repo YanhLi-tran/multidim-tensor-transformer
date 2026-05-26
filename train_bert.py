@@ -429,6 +429,8 @@ def main():
     if args.from_scratch:
         tag += "_scratch"
     tag += f"_L{args.num_layers}"
+    if args.variant == "tucker":
+        tag += f"_rank{args.tucker_rank}"
 
     os.makedirs(args.output_dir, exist_ok=True)
     start_epoch = 1
@@ -436,6 +438,7 @@ def main():
         "variant": args.variant,
         "from_scratch": args.from_scratch,
         "num_layers": args.num_layers,
+        "tucker_rank": args.tucker_rank if args.variant == "tucker" else None,
         "epochs": [],
     }
     best_ppl = float("inf")
